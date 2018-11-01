@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>City Population</title>
+		<script type="text/javascript">
+		function getData(){
+			var name=document.getElementById("name").value;
+			var src="http://127.0.0.1:8080/city.php?name="+name;
+			// Ajax
+			// XMLHttpRequest 建立一個內建的物件來負責連線到伺服器
+			var req=new XMLHttpRequest();
+			req.open("get",src); // 設定連練資訊的概念，(連線的方法,連線的網址)
+			req.onload=function(){ // 註冊 load 事件，當連線完成後觸發，得到小弟回報
+				var result=document.getElementById("result");
+				result.innerHTML=this.responseText;}
+			req.send(); // 送出連線，派出小弟
+		}
+		</script>
+	</head>
+	<body>
+		<h3>City Population</h3>
+		<div>
+			<input type="text" id="name"/> 
+			<input type="button" value="Search" onclick="getData();"/>	
+		</div>
+		<div id="result"></div>
+	</body>
+</html>

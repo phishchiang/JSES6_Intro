@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Google Developers</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style type="text/css">
+        
+        body{
+            margin: 0px;
+            font-family:sans-serif;
+        }
+        
+        .outer-background{
+			background-color: #F7F7F7;/*? shadow covered */
+        }
+        
+        .outer-background-none{
+            
+        }
+        
+        .outer-background2{
+            background-color: #303c42;
+        }
+        
+        .outer-background3{
+            background-color: #455a64;
+        }
+        
+        .main-box-padding{
+            padding: 40px 0px;
+        }
+        
+        .frame{
+            width:888px;
+            margin: 0px auto; /* 1parm:上下 2parm:左右*/
+            text-align:center;
+        }
+        
+        .frame-bottom{
+            width:93%;
+            margin: 0px auto;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        
+        .navigator-bar-desktop{
+            /*display : flex;
+            align-items : center;*/
+            width: 100%;
+            height: 47px;
+            border-bottom: 1px solid #bdbdbd;
+			background-color: white;
+			position: fixed;
+			top:0px;
+			z-index:10;
+        }
+        
+        .navigator-bar-mobile{
+            width: 100%;
+            height: 47px;
+            border-bottom: 1px solid #bdbdbd;
+			background-color: white;
+			position: fixed;
+			top:0px;
+			z-index:10;
+        }
+
+		.inner-center{
+			display:inline-block;
+			vertical-align:middle;
+		}
+        
+        .inner-top{
+			display:inline-block;
+			vertical-align:top;
+		}
+        
+        .search-box{
+            height: 192px;
+            text-align: center;
+            margin-top: 87px;/*47+40*/
+			/*background-color: pink;*/
+			/*z-index:7;*/
+        }
+        
+        #logo-btn{
+            width: 80px;
+            height: 100%;
+            background:url("https://developers.google.com/_static/af7ae4b3fc/images/redesign-14/logo-grey.svg") no-repeat center center;
+        }
+        
+        #logo-btn a {
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }
+
+/*手機:start*/
+
+		.fake{/*::before*/
+		   width:0px;
+		   height:100%;
+		   position:relative;
+		   display:inline-block;
+		   vertical-align:middle;
+		}
+
+		#mb-title-link {
+			font-size:18px;
+		}
+        
+        #menu-btn{
+            width: 50px;
+            height: 25px;
+			background:url("http://kiwisw.web.fc2.com/imgweb/ic_menu_black_48dp_2x.png") no-repeat center center;
+            background-size: contain;
+        }
+        
+        #menu-btn a{
+            width: 100%;
+			height: 100%;
+            text-decoration: none;
+        }
+        
+        #login{
+            border: 0;
+            background: transparent;
+			margin:2px 0px;
+            padding: 10px 8px;
+            color: #757575;
+            position: absolute;
+            right: 30px;
+			font-size: 13px;
+        }
+        
+        #login:hover{
+            color: black;
+            background-color: #ebebeb;
+            opacity: 0.5;
+        }
+ /*手機:end*/
+        .tab{
+            display:inline-block;
+            margin-left: 20px;
+        }
+
+        .tab a {
+            float: left;
+            display: block;
+            color: #7d7d7d;
+            font-size: 14px;
+            /*font-family:sans-serif;*/
+            text-decoration: none;           
+            text-align: center;
+            padding: 11px 23px;
+        }
+        
+        .focus{
+            border-bottom: 3px solid #757575;
+            color: black;
+        }
+        
+        .card{
+            box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+        }
+        
+        input.search{
+            width: 70%;
+            padding-left: 62px; 
+            font-size: 17px;
+            color: #757575;
+            background-color: #f7f7f7;
+            border-width:0px;
+            border:none;
+            padding-bottom: 6px;
+            padding-top: 3px;
+        }
+        
+        .search-container{
+            margin-top: 40px;
+        }
+        
+        #search-addon{
+            display:inline-block;
+            width: 24px;
+            height: 24px; background:url("http://kiwisw.web.fc2.com/imgweb/magnify.png") no-repeat center center;
+            background-size: contain;
+            position: relative;
+            left: 50px;
+            top: 8px;
+        }
+        
+        #google-img{
+            width: 450px;
+        }
+        
+        .large-card{
+            width: 100%;
+            margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 40px;
+            text-align:center;
+        }
+    
+        .normal-card{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .img-fill{
+            max-width:100%;
+            max-height:100%;
+        }
+        
+        .card-title{
+            font-size: 22px;
+        }
+        
+        .card-title-blue{
+            font-size: 22px;
+            color: #039be5;
+        }
+        
+        .paint-blue{
+            color: #039be5;
+        }
+        
+        .card-container{
+            /*margin: 15px 5px 30px 10px;*/
+            padding: 25px 20px 25px 20px;
+            color: #4a4d58;
+        }
+        
+        .card-btn{
+            border: 0;
+            background: transparent;
+            margin:2px -8px 2px 5px;
+            padding: 10px 8px;
+            color: #039be5;
+			font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .card-btn:hover{
+            color: rgba(3,155,229, 1);
+            background-color: rgba(192,245,255, 0.5);
+            /*opacity: 0.5;*/
+        }
+        
+        .left-normal-card{
+            width:50%;
+            display:inline-block;
+            /*flex: 1;*/
+            /*display: table*/
+            margin-left: 0px;
+            padding-right: 20px;
+        }
+
+        .right-normal-card{
+            width:50%;
+            display:inline-block;
+            /*flex: 1;*/
+            /*display: table;*/
+            margin-right: 0px;
+            padding-left: 20px;
+        }
+		
+		.google-support{
+			margin-bottom: 40px;
+			text-align:left;/*覆寫*/
+		}
+
+		.left-google-support{
+			width:50%;
+			display:inline-block;
+			vertical-align:top;
+			text-align:left;/*覆寫*/
+		}
+		
+		.right-google-support{
+			width:50%;
+			display:inline-block;
+			vertical-align:top;
+			text-align:left;/*覆寫*/
+		}
+
+		.link-blue-bold{
+			text-decoration:none;
+			font-size: 20px;
+			font-weight:bold;
+			color: #4285F4;
+		}
+        
+        .link-green-bold{
+            text-decoration:none;
+			font-size: 20px;
+			font-weight:bold;
+			color: #3FC968;
+        }
+        
+        .link-yellow-bold{
+            text-decoration:none;
+			font-size: 20px;
+			font-weight:bold;
+			color: #F4B400;
+        }
+
+        button.btn-blue{/*改樣式*/
+            background-color: #4285F4;
+            color: white;
+        }           
+        
+        button.btn-green{/*改樣式*/
+            background-color: #02D156;
+            color: white;
+        }
+        
+        button.btn-yellow{/*改樣式*/
+            background-color: #FFB703;
+            color: white;
+        } 
+
+		.sub-title-sup{
+			font-size: 17px;
+			margin-bottom:20px;
+		}
+
+		.content-sup{
+			margin-bottom:10px;
+		}
+
+		.find-button{
+			font-weight: bold;
+			font-size: 14px;
+		}
+        
+        div.support-box{
+            height: 270px;
+            width: 100%;
+        }
+        
+        .w3-card{
+            
+            background-color: white;
+        }
+        
+        .text-style-white{
+            padding-bottom: 10px;
+            font-size: 13px;
+            color: white;           
+        }
+        
+        .text-style-trans{
+            display: block;
+            padding-bottom: 10px;
+            font-size: 14px;
+            color: white;
+            opacity: 0.7;
+        }
+        
+        .map{
+            display:inline-block;
+            width: 26%;
+            vertical-align:top;
+            padding-right: 15px;
+        }
+        
+        .map-right{
+            position: absolute;
+            right: 0px;
+            display:inline-block;
+            width: 23%;
+            vertical-align:top;
+            background-color: #37424b;
+            /*修改上層屬性 start*/
+            margin-top: -20px;
+            margin-bottom: -30px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            /*修改上層屬性 end*/
+        }
+        
+        .map div{
+            padding-bottom: 10px;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .map a{
+            display: block;
+            padding-bottom: 10px;
+            font-size: 14px;
+            color: white;
+            opacity: 0.7;
+        }
+        
+        .map-right a{
+            display: block;
+            padding-bottom: 10px;
+            font-size: 14px;
+            color: white;
+            opacity: 0.7;
+            padding-left: 10%;/*temp*/
+        }
+        
+        select.select-style{
+            padding:8px;
+            margin-right: 15px;
+	    }
+        
+        .left-start{
+            position: absolute;
+            right: 0px;
+        }
+        
+        #map-btn{
+            width: 100%;
+            height: 30px;
+            background:url("https://developers.google.com/_static/b978c21594/images/redesign-14/lockup-color-knockout.png") no-repeat center center;
+            background-size: contain;
+            text-align: center;
+        }
+        
+        #map-btn a {
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }        
+
+        
+        /*電腦 div*/
+        .navigator-bar-desktop{display:block;}
+        .navigator-bar-mobile{display:none;}
+
+        @media (max-width:500px){ /*手機版面*/
+            .title{font-size:20px;}
+            .frame{width:320px;}
+            /*手機 div*/
+            .navigator-bar-desktop{display:none;}
+            .navigator-bar-mobile{display:block;}
+
+            #google-img{
+                width: 80%;
+            }
+            
+            .left-normal-card{
+                width:100%;
+                height:inherit; 
+                padding-right: 0px;/*覆寫*/
+            }
+
+            .right-normal-card{
+                width:100%;
+                height:inherit;
+                padding-left: 0px;/*覆寫*/
+            }
+			
+			.frame{
+				width:90%;/*覆寫*/
+				margin: 0px auto; /* 1parm:上下 2parm:左右*/
+				text-align:center;
+			}
+            
+            .left-google-support{/*??位置要更換*/
+                width:100%;
+            }
+
+            .right-google-support{/*??位置要更換*/
+                width:100%;
+            }
+            
+            .map{
+                width: 47%;
+                padding-top: 15px;
+            }
+
+            .map-right{
+                width: 47%;
+                /*修改上層屬性 start*/
+                margin-top: 10px;
+                /*修改上層屬性 end*/
+            } 
+            
+            .left-start{
+                display: block;
+            }
+            
+        }        
+
+        
+    </style>
+    
+</head>
+    
+<body>
+    <header>
+        <div class="navigator-bar-mobile">
+			<div class="fake"></div>
+            <div class="inner-center" id="menu-btn">
+                <a class="inner" href=""></a>
+            </div>
+
+			<a herf="" class="inner-center" id="mb-title-link">Google Developers</a>
+            
+            <button class="inner-center" id="login">登入</button>
+
+        </div>
+        <div class="navigator-bar-desktop">
+
+			<div class="fake"></div>
+            <div class="inner-center" id="logo-btn">
+                <a class="inner-center" href=""></a>
+            </div>
+
+            <div class="tab inner-center">
+                <a class="focus" href="">Home</a>
+                <a href="">Product Index</a>
+                <a href="">Blog</a>
+            </div>
+            
+            <button class="inner-center" id="login">登入</button>
+
+        </div>
+        
+        
+        <div class="search-box card">
+            <img id="google-img" src="https://developers.google.com/_static/af7ae4b3fc/images/redesign-14/lockup-color.svg" alt="Smiley face"/>
+            
+            <div class="search-container">
+                <div id="search-addon"></div>
+                <input class="search" type="text" name="Search" value="搜尋產品和說明文件"/>
+            </div>
+        </div>
+        
+
+    </header>
+    
+    
+    <main>
+        <div class="outer-background">
+            <div class="main-box-padding">
+                <div class="frame">
+                <!-- Main Block1: start -->
+                    <div class="w3-card large-card">
+                        <img class="img-fill" src="https://lh3.googleusercontent.com/gALBUZ-_ljeULlxgTcqIb5YpRWH_nKTJCanknereTZHojfbPmgWCQIDDQwlb5wr2RdfU5gKWsiWTJ-T6lWah6qxlYjeNsqNY=s888" alt="Smiley face"/>
+                        <div class="w3-container w3-left-align card-container">
+                            <div class="card-title">Google I/O 2017 May 17 - 19, Mountain View</div>
+                            <p>Watch the Google Keynote, Developer Keynote, and session videos if you weren't able to join us in real-time. You can also watch our I/O Guide, <span class="paint-blue">Timothy Jordan</span>, touring the venue and getting the inside scoop.</p>
+                            
+                            <p><span class="paint-blue">#io17 #io17extended</span></p>
+
+                            <div style="margin-left:-10px;">
+                                <button class="card-btn">SESSIONS</button>
+                                <button class="card-btn">I/O GUIDE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="left-normal-card">
+                        <div class="w3-card normal-card">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/7-JOE6V1aTSFQdc5T9-PjWihrAzCMPIeOsX12E7iuS1z2Ngfbw36Ve4xbE6lJcNYx7kQGtOvpKvPQx57SUNs8kcbmJGngzk=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div class="card-title">Google I/O'17 keynote highlights</div>
+                                <p>Catch the highlights and top announcements of each keynote.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">GOOGLE KEYNOTE</button>
+                                    <button class="card-btn">DEVELOPER KEYNOTE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="right-normal-card">
+                        <div class="w3-card normal-card">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/sjidY-FZU8RqWkIis736f214tmG3jKTZ-zkFbOs6X2gWTuTJhpTgIzWdDZry5iOJ9c420SJfkRYsmtyJc2Y88EBo-JTLmHs=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div class="card-title">Google I/O'17 event highlights</div>
+                                <p>Relive the best moments of this year's I/O in photos and with our highlights video.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">PHOTO</button>
+                                    <button class="card-btn">ALBUM VIDEO</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>	
+                <!-- Main Block1: end -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="outer-background-none">
+            <div class="main-box-padding" style="padding-bottom:0px;"><!--覆寫-->
+                <div class="frame">
+                <!-- Main Block2: start -->
+                    <div class="google-support">
+                        <div style="color:#7d7d7d;font-size:30px;">Build <span style="font-weight:bold;">anything</span> with Google</div>
+                    </div>
+
+                    <div class="left-google-support">
+                        <div class="support-box">
+                            <div>
+                                <a class="link-blue-bold" href="">Develop —</a>
+                            </div>
+                            <div class="sub-title-sup">Build high-quality apps faster</div>
+                            <div class="content-sup">We've got the basics covered all in one place, offering a wide range of tools for you to build high-quality apps as quickly and reliably as possible.</div>
+                            <button class="w3-button btn-blue w3-round find-button">FIND PRODUCTS</button>
+                        </div>
+
+                        <div class="support-box">
+                            <img id="google-img" src="https://lh3.googleusercontent.com/1FoyBbUzKHaPNis3913BoVdTl2By-Kdt1x97KRE0CILxZUdf3TltkWfOCKjw2jGtSaOu6tzpsoGmGQtKhLBS428phAsJZw=s688" alt="Smiley face"/>
+                        </div>                
+
+                        <div class="support-box">
+                             <div>
+                                <a class="link-yellow-bold" href="">Earn —</a>
+                            </div>
+                            <div class="sub-title-sup">Tap into a range of tools to make more money</div>
+                            <div class="content-sup">Earn money quickly with engaging ads and in-app purchases and gather user-driven insights to guide how you monetize.</div>
+                            <button class="w3-button btn-yellow w3-round find-button">FIND PRODUCTS</button>
+                        </div>
+
+                    </div><!--
+                    --><div class="right-google-support">
+                        <div class="support-box">
+                            <img id="google-img" src="https://lh3.googleusercontent.com/tfY9uxfOe8Gv4C5IcNXuPyTlYZ4bOuzsazDukvgQBLXE33jQySvn0W4XO6dWaLkSD6oQVD_Wz1MUzQoWQ12M5RsAWUD1jt4=s688" alt="Smiley face"/>
+                        </div>
+
+                        <div class="support-box">
+                            <div>
+                                <a class="link-green-bold" href="">Grow —</a>
+                            </div>
+                            <div class="sub-title-sup">Grow and retain an active user base</div>
+                            <div class="content-sup">Drive app discovery and engage the right users at the right time to ensure they keep on coming back.</div>
+                            <button class="w3-button btn-green w3-round find-button">FIND PRODUCTS</button>
+                        </div>
+
+                        <div class="support-box">
+                            <img id="google-img" src="https://lh3.googleusercontent.com/TtuZicGs-IYxlDPe6Vcopcj6DXHDiH59-vL1WIwYB8sUtKmkXvWZNwyf1xI4Mn5rw3YjlJJndKOEh5jbkuQYjSe1HKjvBRw=s688" alt="Smiley face"/>
+                        </div>    
+
+                    </div>
+                <!-- Main Block2: end -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="outer-background">
+            <div class="main-box-padding">
+                <div class="frame">
+                <!-- Main Block3: start -->
+                    <div style="">
+                    <div class="left-normal-card">
+                        <div class="w3-card normal-card inner-top">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/A4hX48ZfFtQzVqmTDGgG8ntX29q3mq3mfjtUmqk-uUzrxH6GaSvKFKetj0-ADtN1Eyy9gXPVO-sRf7PMfoYXHPwd18Ed37Y=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div><a herf="" class="card-title-blue">Join the Actions on Google Developer Challenge</a></div>
+                                <p>Catch the highlights and top announcements of each keynote.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">ENTER NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="right-normal-card">
+                        <div class="w3-card normal-card inner-top">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/-qz7-yzl-aY0oUWWdVnjpRB_ttgDtLk-q0JegJTDIytK0jfgE6sxihKDSFfBlqB8T1mZ42E2gVb1Q560GE4j0_QQkmqjqbA=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div><a herf="" class="card-title-blue">Android now supports Kotlin</a></div>
+                                <p>Relive the best moments of this year's I/O in photos and with our highlights video.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">DOWNLOAD</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    </div>
+                    
+                    
+                    <div class="left-normal-card">
+                        <div class="w3-card normal-card inner-top">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/d72n5hoP5P4wpbg-x4cn9O0a9BWQ9Hfv-_FtnWuG-DWgwa0kJuAPntYC8PBPHJGwfS3hzX--4uIi1racGhIZIkmVMLBl07X2=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div><a herf="" class="card-title-blue">Introducing the TensorFlow Research Cloud</a></div>
+                                <p>To accelerate the pace of open machine-learning research, we are introducing the TensorFlow Research Cloud (TFRC), a cluster of 1,000 Cloud TPUs that will be made available free of charge to support a broad range of computationally-intensive research projects that might not be possible otherwise.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">LEARN MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="right-normal-card">
+                        <div class="w3-card normal-card inner-top">
+                            <img class="img-fill" src="https://lh3.googleusercontent.com/7ykal2-4yB3u4fwSr6f0StNT4qCusWDlU7Pg03JJwJxtCrP-hSv-BbVPIdUEuCDDW3WRT5Jvokai2YnCLHwgaekeYFct=s688" alt="Smiley face"/>
+                            <div class="w3-container w3-left-align card-container">
+                                <div><a herf="" class="card-title-blue">What's new with Firebase at I/O'17</a></div>
+                                <p>From Performance Monitoring to Analytics improvements to phone authentication, learn about all the exciting updates to Firebase announced during Google I/O.</p>
+
+                                <div style="margin-left:-10px;">
+                                    <button class="card-btn">READ MORE</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>	                    
+                <!-- Main Block3: end -->
+                </div>
+            </div>
+        </div> 
+        
+    </main>
+
+    
+    <footer>
+        <div class="outer-background2">
+            <div class="frame-bottom">
+                <div class="map">
+                    <div>連結</div>
+                    <a herf="">網誌</a>
+                    <a herf="">Facebook</a>
+                    <a herf="">Google+</a>
+                    <a herf="">Medium</a>
+                    <a herf="">Twitter</a>
+                    <a herf="">YouTube</a>
+                </div>
+                <div class="map">
+                    <div>計劃</div>
+                    <a herf="">Women Techmakers</a>
+                    <a herf="">Agency Program</a>
+                    <a herf="">GDG</a>
+                    <a herf="">Google Developer Experts</a>
+                    <a herf="">Startup Launchpad</a>
+                </div>
+                <div class="map">
+                    <div>開發人員控制台</div>
+                    <a herf="">Google API Console</a>
+                    <a herf="">Google Cloud Platform Console</a>
+                    <a herf="">Google Play Console</a>
+                    <a herf="">Firebase Console</a>
+                    <a herf="">Cast SDK Developer Console</a>
+                    <a herf="">Chrome Web Store Dashboard</a>
+                </div>
+                <div class="map-right">
+                    <div class="inner-center" id="map-btn">
+                        <a class="inner-center" href=""></a>
+                    </div>
+                    <hr style="margin-bottom:0px;" class="text-style-trans">
+                    <a herf="">Android</a>
+                    <a herf="">Chrome</a>
+                    <a herf="">Firebase</a>
+                    <a herf="">Google Cloud Platform</a>
+                    <a herf="">所有產品</a>
+                </div>
+            </div>
+        </div>
+        <div class="outer-background3">
+            <div class="frame-bottom">
+                <select class="select-style inner-center">
+                    <option selected disabled>繁體中文</option>
+                    <option value="lang1">1</option>
+                    <option value="lang2">2</option>
+                    <option value="lang3">3</option>
+                    <option value="lang4">4</option>
+                    <option value="1ang5">5</option>
+                </select>
+                <span class="text-style-white inner-center">條款 | 隱私權</span>
+                <div class="left-start text-style-white inner-center">
+                    <span style="margin-right:20px;">Sign up for the Google Developers newsletter</span>
+                    <button style="margin-right:15px;" class="w3-button btn-blue w3-round find-button">訂閱</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Scope / Namespace</title>
+		<script>
+			var n=3;
+
+			function t(){
+				var x=4;
+				var n=6;
+				alert(x+n);
+			}
+			t();
+			// 先找函式裡面的變數，找不到才會往外面找
+			alert(x); // 錯誤，他只能往"外面"找
+			// 外面不能用裡面的變數；但是裡面可以用外面的變數
+			// 全域空間 VS 區域空間
+
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

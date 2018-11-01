@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Selection</title>
+		<script>
+			function init(){
+				var latestTxt=document.getElementById("latestTxt");
+				function handler(){
+				}
+				latestTxt.addEventListener("click",handler);
+			}
+			function $(id){
+				var id=document.getElementById(id);
+				return id;
+			}
+			function change(choice){
+				var latestMovie=$("latestMovie");
+				var popMovie=$("popMovie");
+				var genreMovie=$("genreMovie");
+				var latestTxt=$("latestTxt");
+				var popTxt=$("popTxt");
+				var genreTxt=$("genreTxt");
+
+				if(choice==0){
+					latestMovie.className="content-card-bdr-all-ON";
+					popMovie.className="content-card-bdr-all-OFF";
+					genreMovie.className="content-card-bdr-all-OFF";
+					latestTxt.className="btn-txt-HL"
+					popTxt.className="btn-txt"
+					genreTxt.className="btn-txt"
+
+				}else if(choice==1){
+					latestMovie.className="content-card-bdr-all-OFF";
+					popMovie.className="content-card-bdr-all-ON";
+					genreMovie.className="content-card-bdr-all-OFF";
+					latestTxt.className="btn-txt"
+					popTxt.className="btn-txt-HL"
+					genreTxt.className="btn-txt"
+				}else if(choice==2){
+					latestMovie.className="content-card-bdr-all-OFF";
+					popMovie.className="content-card-bdr-all-OFF";
+					genreMovie.className="content-card-bdr-all-ON";
+					latestTxt.className="btn-txt"
+					popTxt.className="btn-txt"
+					genreTxt.className="btn-txt-HL"					
+				}
+			}
+		</script>
+		<style>
+			body{margin:0px;}
+			.header{
+				width:1000px;margin-left: auto; margin-right: auto;
+				
+			}
+			.header-txt{
+				font-size:48px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				text-align: center;
+				font-weight: bolder;
+				color:#703030
+			}
+			.btn-txt{
+				font-size:26px;padding-top: 10px;padding-bottom: 10px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				text-align: center;
+				font-weight: normal;
+				color:#7E827A;
+				width:33%;
+				display:inline-block;
+				cursor:pointer;
+				/*background-color:red;*/
+			}
+			.btn-txt-HL{
+				font-size:30px;padding-top: 10px;padding-bottom: 10px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				text-align: center;
+				font-weight: bold;
+				color:#703030;
+				width:33%;
+				display:inline-block;
+				cursor:pointer;
+				/*background-color:red;*/			
+			}
+			.content-card-bdr-all-ON{
+				width:500px;height:500px;
+				/*background-color:#2F343B;*/
+				margin-left: auto; margin-right: auto;
+				display:block;	
+			}
+			.content-card-bdr-all-OFF{
+				width:500px;height:500px;
+				/*background-color:#2F343B;*/
+				margin-left: auto; margin-right: auto;
+				display:none;
+
+			}			
+			.content-card-bdr-btn{
+				width:500px;height:450px;
+				/*background-color:#7E827A;*/
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+				vertical-align: bottom;
+
+			}
+			.content-title-txt{
+				font-size:20px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				padding: 15px;
+				text-align: center;
+				font-weight:lighter;
+				color:#2F343B;
+			}
+			.content-movie-photo-bdr{
+				text-align: center;
+				height:100%;
+				vertical-align: middle;
+				/*background-color:red;*/
+			}
+
+		</style>
+	</head>
+	<body onload="init();">
+	<div class="header">
+		<div class="header-txt">Movie Selection</div>
+		<div>
+			<div id="latestTxt" class="btn-txt-HL" onclick="change(0)">LATEST</div>
+			<div id="popTxt" class="btn-txt" onclick="change(1)">POPULAR</div>
+			<div id="genreTxt" class="btn-txt" onclick="change(2)">GENRE</div>
+		</div>
+		<div id="latestMovie" class="content-card-bdr-all-ON">
+			<div class="content-title-txt">
+				Latest Movie
+			</div>			
+			<div class="content-card-bdr-btn">
+				<div class="content-movie-photo-bdr">
+					<img src="https://i.imgur.com/L68FtMA.jpg"  align="center" height="100%"></img>
+				</div>
+			</div>
+		</div>
+		<div id="popMovie" class="content-card-bdr-all-OFF">
+			<div class="content-title-txt">
+				Popular Movie
+			</div>
+			<div class="content-card-bdr-btn">
+				<div class="content-movie-photo-bdr">
+					<img src="https://i.imgur.com/sfkgdXO.gif"  align="center" width="500px"></img>
+				</div>				
+			</div>
+		</div>
+		<div id="genreMovie" class="content-card-bdr-all-OFF">
+			<div class="content-title-txt">
+				Movie Genre
+			</div>
+			<div class="content-card-bdr-btn">
+				<div class="content-movie-photo-bdr">
+					<img src="https://i.imgur.com/a5MK3cu.jpg" align="center" width="500px"></img>
+				</div>				
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+
+
+
+
+
+<!-- 
+Q : 如何把按鈕做成滑鼠指標會變成手指圖示?
+
+ -->

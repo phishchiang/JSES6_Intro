@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Scope / Namespace</title>
+		<script>
+			var n=3;
+
+			function t(){
+				var x=4;
+				// 寫在這邊則是兩次都印出8
+				// var n=3;
+
+				n++;
+				alert(x+n);
+			}
+			t();
+			t();
+			// 一次是8，第二次是9
+
+
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+		<script>
+			// undefined : 真的空值
+			// null : 空值，把空這個值放進去
+			// 印出一個物件的body element，
+			// alert(window.document.body);
+			// 標籤的內文
+			// alert(window.document.body.innerHTML);
+			// 先抓body標籤，然後取代裡面的內容
+			// 必須要等到靜態內容都已經載入完成才開始執行JavaScripts
+			function changeToPage(){
+				var page=document.getElementById("page");
+				var img=document.getElementById("img");
+				var btn=document.getElementById("btn");
+				page.style.fontWeight="bold";
+				img.style.fontWeight="normal";
+				btn.value="Page Search";
+			}
+			function changeToImage(){
+				var page=document.getElementById("page");
+				var img=document.getElementById("img");
+				var btn=document.getElementById("btn");
+				page.style.fontWeight="normal";
+				img.style.fontWeight="bold";
+				btn.value="Image Search";
+
+			}
+
+		</script>
+	</head>
+	<body>
+		<div>
+			<span id="page" onclick="changeToPage()">Page</span>
+			<span id="img" onclick="changeToImage()">Image</span>
+		</div>
+		<div>
+			<input type="text" />
+			<input id="btn" type="button" value="Page Search" />
+		</div>
+	</body>
+</html>

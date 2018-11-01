@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Javascripts</title>
+		<script>
+			/*
+			var n1=prompt("Enter a Number","");
+			n1=Number(n1);
+			if(isNaN(n1)){ //第一個不正確
+				alert("不正確的資料");
+			}else{
+				var n2=prompt("Enter a Number","");	
+				n2=Number(n2);
+				if(isNaN(n2)){alert("不正確的資料");}
+				else{
+					var op=prompt("Operation: +, -, *, /","");
+					var result;
+
+					if(op=="+"){ // 看看OP是不是字串+
+						result=n1+n2;
+					}else if(op=="-"){
+						result=n1-n2;
+					}else if(op=="*"){
+						result=n1*n2;
+					}else if(op=="/"){
+						result=n1/n2;
+					}else{
+						result="不支援的運算";
+					}
+					alert(result);					
+				}
+			}
+			*/
+			
+			var n = "a";
+			while(isNaN(n)){
+				n = prompt("Enter a Number","");
+				alert(n);
+				n = Number(n);
+				alert(n);
+				n++;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

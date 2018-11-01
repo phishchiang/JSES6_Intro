@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML DOM</title>
+		<script type="text/javascript">
+		function add(){
+			// 動態建立一個標籤物件(HTML Element)
+			var link=document.createElement("a"); // <a></a>
+			link.innerHTML="Google"; // <a>Google</a>
+			link.href="https://www.google.com.tw/"; // <a href="https://www.google.com.tw/">Google</a>
+			// 取得想要建立位置的父標籤
+			// 連結新建立的標籤物件到 HTML DOM 上
+			document.body.appendChild(link);
+		}
+		</script>
+	</head>
+	<body>
+		<div>
+			<!-- 點擊按鈕畫面生出新標籤 -->
+			<button onclick="add();">Add</button>
+		</div>
+		<!-- <a href="https://www.google.com.tw/">Google</a> -->
+	</body>
+</html>

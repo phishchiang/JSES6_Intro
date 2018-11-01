@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Javascripts</title>
+		<script>
+			var n1="a";
+			while(isNaN(n1)){ // 如果n1不是一個數字的話
+				n1 = prompt("Enter First Number","");
+				if(isNaN(n1)){
+					alert("First Number不正確的資料");
+				}else{ // 如果n1是一個是數字的話，n+1脫離while迴圈
+					n1 = Number(n1);
+					n1++;					
+				}
+			}
+			n1--; // 再把n1還原成本來輸入的數值
+			var n2="a";
+			while(isNaN(n2)){
+				n2 = prompt("Enter Second Number","");
+				if(isNaN(n2)){
+					alert("Second Number不正確的資料");
+				}else{
+					n2 = Number(n2);
+					n2++;					
+				}
+			}
+			n2--; // 再把n2還原成本來輸入的數值	
+			var op=prompt("Operation: +, -, *, /","");
+			var result;
+
+			if(op=="+"){ // 看看OP是不是字串+
+				result=n1+n2;
+			}else if(op=="-"){
+				result=n1-n2;
+			}else if(op=="*"){
+				result=n1*n2;
+			}else if(op=="/"){
+				result=n1/n2;
+			}else{
+				result="不支援的運算";
+			}
+			alert(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

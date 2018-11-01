@@ -1,0 +1,29 @@
+javascript 			node.js
+php					apache http server
+asp.net				iis
+java				apache tomcat
+
+
+
+
+本機的路徑
+c:\appserv\www\網頁檔案
+
+透過 server 軟體
+對外的網址
+http://localhost:8080/網頁檔案
+http://localhost:8080/city.php?name=hsinchu
+http://localhost:8080/city.php?name=taipei
+
+看不到邏輯，只看得到送出來的結果，後端的安全性比較高
+
+form的缺點 其實是載入全新的網頁
+
+
+
+
+https 比 post 更安全
+	1. 要對資料做加密,server設定好即可，不用寫code
+	2. 找第三方認證機構做審核，須付錢
+
+

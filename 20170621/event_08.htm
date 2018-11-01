@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Event</title>
+		<script type="text/javascript">
+
+		function init(){
+			// 所有網頁的靜態內容載入完成後，觸發這個函式，做程式的進入點
+			var btn=document.getElementById("btn");
+			var box=document.getElementById("box");
+
+			var handler=function(e){
+				document.title=e.clientX+","+e.clientY;
+			};
+			// btn.addEventListener("mousemove",handler);
+			 box.addEventListener("mousemove",handler); // 在整份網頁裡面
+			/*
+				1. 瀏覽器偵測到使用著的點擊，觸發click事件
+				2. 瀏覽器收集和click事件相關的資訊，並產生事件物件(Event Object)
+					var eventObject=new 事件物件();
+				3. 呼叫已註冊的事件處理函式，並將事件物件透過參數傳入
+					handler(eventObject);
+			*/
+	
+		}
+		
+
+		</script>
+		<style>
+			.box{width:50px; height:80px; background-color:blue}
+		</style>
+	</head>
+	<body onload="init();"><!-- BODY這個標籤載入完成之後，觸發load事件 -->
+		<button id="btn">Click</button>	
+		<div id="box" class="box"></div>		
+	</body>
+</html>

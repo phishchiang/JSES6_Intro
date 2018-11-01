@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Scope / Namespace</title>
+		<script>
+			var x=3;
+
+			var outer=function(){
+				// 
+				var y=4;
+				function inner(){
+					var z=5;
+					return x+y+z;
+				}
+				var result=inner();
+				alert(result);
+			}
+
+			// 12
+			outer();
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

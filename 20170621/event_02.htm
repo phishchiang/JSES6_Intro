@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Event</title>
+		<script type="text/javascript">
+		function over(elem){
+			// 如果這邊寫this = window 物件
+			elem.style.color="red";
+		}
+		function out(elem){
+			elem.style.color="black";
+		}		
+		</script>
+	</head>
+	<body>
+		<!-- on事件規矩，""裡面放任何JavaScript程式 -->
+		<button onmouseover="over(this);"
+			onmouseout="out(this);">Click</button>
+		<button onmouseover="over(this);"
+			onmouseout="out(this);">Click 2</button>				
+	</body>
+</html>

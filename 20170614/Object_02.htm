@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object</title>
+		<script src="lib.js"></script>
+		<!-- 規矩一定要分開寫兩個<script> -->
+		<script>
+			// 物件的使用
+			// 使用建構函式 前面一定要加"new"，如果沒有加，他會當作一般函式的邏輯
+			// 建構式就是 class
+			// 建構式名稱習慣"名詞大寫"，一般函式則是動詞首字小寫
+			var p1=new Player("ply",100);
+			var p2=new Player("Bob",80);
+
+			var slime=new Monster("Slime",1);
+			var dragon=new Monster("Dragon",10);
+
+			slime.hp=25;
+
+			p1.fight(slime);
+			p1.report();
+			p2.fight(dragon);
+			p2.report();
+
+			alert(slime.hp);
+      // Another way to create Object is {}
+      let app={
+        'a':'apple',
+        'b':{'book':'bookName'},
+        'c':'cat',
+        'skill':[888, 666, 999]
+      }
+      console.log(app['a']);
+      for(let key in app){
+        console.log(app[key]);
+      }
+			// p1.hojosdss=45;
+			//alert(p1.hojosdss);
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

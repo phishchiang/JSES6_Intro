@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML DOM</title>
+		<script type="text/javascript">
+		function add(){
+			// 動態建立一個標籤物件(HTML Element)
+			var link=document.createElement("a"); // <a></a>
+			link.innerHTML="Google"; // <a>Google</a>
+			link.href="https://www.google.com.tw/"; // <a href="https://www.google.com.tw/">Google</a>
+			// 取得想要建立位置的父標籤，如果不是body的做法
+			// 連結新建立的標籤物件到 HTML DOM 上
+			var menu=document.getElementById("menu");
+			menu.appendChild(link);
+		}
+		function del(){ // 刪除標籤
+			// var menu=document.getElementById("menu");
+			// document.body.removeChild(menu);
+			delById("menu");
+			// delById("abv");
+		}
+		function delById(id){
+			var elem=document.getElementById(id); // 不需要""， 因為上面在呼叫的時候，參數裡面已經有""了
+			// 取得相對父親標籤
+			elem.parentNode.removeChild(elem);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="menu" style="background-color:red;">
+			<!-- 點擊按鈕畫面生出新標籤 -->
+			<button onclick="add();">Add</button>
+			<button onclick="del();">Del</button>
+			<!-- <a href="https://www.google.com.tw/">Google</a> -->
+		</div>
+	</body>
+</html>

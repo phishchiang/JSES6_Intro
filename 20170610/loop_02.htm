@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Loop</title>
+		<script type="text/javascript">
+
+		var n=prompt("Enter a Number","");
+		for(var i=1; i<n; i++){ // i在迴圈中從1 ~ n-1
+			if(i*i==n){ // 恭喜，平方根就是i
+				alert(i);
+				break; // 找到答案了，就不用繼續跑迴圈
+			}else if(i==n-1){ // 只有測到最後一個，才說No
+				alert("No");
+			}
+		}
+
+
+		// 作業 :質數還是合數　2 ~ n-1 %
+
+		/*
+		// for loop
+		// var n=1;
+		var sum=0;
+		for(var n=1; n<=50; n++){
+			sum=sum+n;
+			// n++;
+		}
+		alert(sum);		
+
+
+		
+		// while loop
+		var n=1;
+		var sum=0;
+		while(n<=50){
+			sum=sum+n;
+			n++;
+		}
+		alert(sum);
+		*/
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object</title>
+		<script>
+			
+			// 物件的設計
+
+			var player=new Object();
+			// 
+			// Object 是一個空白的物件，取一個名字叫player
+			// 物件的屬性 和 方法
+			player.name="ply"; // 把資料放進"物件的成員裡面"，這不是"變數"
+			player.hp=100;
+			// 函式的綁定物件bind;
+			// 在物件的成員函式裡面，this 就是物件本身
+			player.fight=function(){
+				this.hp=this.hp-2;
+			};
+			player.rest=function(){
+				this.hp++;
+			};
+			player.report=function(){
+				alert(this.name+" : "+this.hp)
+			};
+
+			// 物件的使用
+			alert(player.name);
+
+			player.fight();
+			player.rest();
+			player.report();
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

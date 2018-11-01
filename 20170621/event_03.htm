@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Event</title>
+		<script type="text/javascript">
+		function init(){
+			// 所有網頁的靜態內容載入完成後，觸發這個函式，做程式的進入點
+			alert("Init");
+		}
+		alert("Loading");
+		</script>
+	</head>
+	<body onload="init();"><!-- BODY這個標籤載入完成之後，觸發load事件 -->
+		<!--
+		事件的註冊
+		<button onclick="alert('Hello');">Click</button>
+		-->
+		<button>Click</button>			
+	</body>
+</html>

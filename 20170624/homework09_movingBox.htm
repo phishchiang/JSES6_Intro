@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Moving Box</title>
+		<style type="text/css">
+			.box{
+				width:100px; height:100px; background-color:red;
+				position:absolute; /* 一定要是絕對定位，才可以拖曳 */
+				left:100px; top:100px;
+			}
+		</style>
+		<script type="text/javascript">
+			var box;
+			function init(){
+				box=document.getElementById("box");
+				box.addEventListener("mousedown", pickup);
+			}
+			function pickup(){
+				// 讓 box 能動
+				document.addEventListener("mousemove", move);
+				// 連續觸發，動態的註冊才適用
+
+				// 若有下一次的點擊換掉，改執行 putdown
+				box.addEventListener("mouseup", putdown);
+				box.removeEventListener("mouseup", pickup);
+
+			}
+			function move(e){
+				// document.title=e.clientX+","+e.clientY;
+				// 讓 box 動
+
+				// (box.offsetLeft,boxoffsetTop) 框框的左上角位置
+
+				box.style.left=(e.clientX+box.offsetLeft)+"px";
+				box.style.top=(e.clientY+box.offsetTop)+"px";
+
+				document.title=box.offsetLeft+","+box.offsetTop;
+				
+			}
+			function putdown(){
+				document.removeEventListener("mousemove", move );
+
+				box.addEventListener("mousedown", pickup);
+				box.removeEventListener("mouseup", putdown);
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<div id="box" class="box"></div>
+	</body>
+</html>

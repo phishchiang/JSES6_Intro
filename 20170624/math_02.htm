@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math and String</title>
+		<script type="text/javascript">
+			function check(){
+				// 字串的建構式來建立
+				// alert(new String("Hello")+new String("World"));
+				// alert(new String("Hello")+"World");
+
+				var value=document.getElementById("text").value;
+				// 取得單行輸入框裡面的屬性
+				// 幾乎每個屬性都是字串
+
+				/*
+					編號	0	1	2	3	4
+							H 	e 	l 	l 	o
+				*/
+
+				/*
+				alert("長度:"+value.length);
+				alert("取得第二個字:"+value.charAt(1));
+				alert("取得 llo:"+value.substring(2, 5)); // 包含開頭，不包含結尾
+				alert("是否包含 abc:"+value.indexOf("abc")); // 搜尋字串是否有，-1不包含
+				alert("是否包含 el:"+value.indexOf("el")); // 找到的話就會回傳編號位置1
+				*/
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text" value="Hello"/>
+		<button onclick="check();">Check</button>
+	</body>
+</html>

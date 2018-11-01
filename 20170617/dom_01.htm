@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+		<script>
+			//DOM
+			var books=new Object();
+			books.history=new Object();
+			books.novel=new Object();
+			books.novel.tom="湯姆歷險記";
+
+			books.novel.search=function(){ // 搜尋小說分類的書
+				alert(this.tom);
+			};
+			books.history.taiwan="台灣歷史";
+
+			alert(books.history.taiwan);
+			books.novel.search();
+			// 使用函式
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

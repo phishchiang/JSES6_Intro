@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+		<script>
+			// undefined : 真的空值
+			// null : 空值，把空這個值放進去
+			// 印出一個物件的body element，
+			// alert(window.document.body);
+			// 標籤的內文
+			// alert(window.document.body.innerHTML);
+			// 先抓body標籤，然後取代裡面的內容
+			// 必須要等到靜態內容都已經載入完成才開始執行JavaScripts
+			function change(){
+				// document.body.innerHTML="New World 2";
+				// 正式名字為[object HTMLDivElement]
+				var divObj=document.getElementById("content");
+				// alert(divObj);
+				divObj.innerHTML="Today is a bad day";
+				alert(divObj.id);
+				divObj.style.color="red";
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<h3>Hello World</h3>
+		<!-- id 原則上不要重複 -->
+		<div id="content" style="color:blue">Today is a good day</div>
+		<!-- 最基本的事件處理 onclick-動態更新 -->
+		<button onclick="change();">Click</button>
+	</body>
+</html>

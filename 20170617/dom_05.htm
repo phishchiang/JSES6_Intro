@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+		<script>
+			// undefined : 真的空值
+			// null : 空值，把空這個值放進去
+			// 印出一個物件的body element，
+			// alert(window.document.body);
+			// 標籤的內文
+			// alert(window.document.body.innerHTML);
+			// 先抓body標籤，然後取代裡面的內容
+			// 必須要等到靜態內容都已經載入完成才開始執行JavaScripts
+			// 習慣用$
+			function $(id){
+				// var id=document.getElementById(id);
+				// return id
+				return document.getElementById(id);
+			}
+			function change(choice){
+				var page=$("page");
+				var img=$("img");
+				var btn=$("btn");
+				if(choice==0){
+					page.className="tab-current";
+					img.className="tab";
+					btn.value="Page Search";
+				}else{
+					page.className="tab";
+					img.className="tab-current";
+					btn.value="Image Search";					
+				}
+			}			
+			/*
+			function changeToPage(){
+				var page=$("page");
+				var img=$("img");
+				var btn=$("btn");
+				page.style.fontWeight="bold";
+				img.style.fontWeight="normal";
+				btn.value="Page Search";
+			}
+			function changeToImage(){
+				var page=$("page");
+				var img=$("img");
+				var btn=$("btn");
+				page.style.fontWeight="normal";
+				img.style.fontWeight="bold";
+				btn.value="Image Search";
+
+			}
+			*/
+		</script>
+		<style type="text/css">
+			.tab{font-weight:normal; color:black;}
+			.tab-current{font-weight:bold; color:red;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span id="page" class="tab-current" onclick="change(0)">Page</span>
+			<span id="img" class="tab" onclick="change(1)">Image</span>
+		</div>
+		<div>
+			<input type="text" />
+			<input id="btn" type="button" value="Page Search" />
+		</div>
+	</body>
+</html>

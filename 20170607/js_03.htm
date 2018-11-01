@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Javascripts</title>
+		<script>
+			var n1=prompt("Enter a Number","");
+			var n2=prompt("Enter a Number","");	
+
+			n1=Number(n1);
+			n2=Number(n2);
+			//isNaN(資料); true/false; 你給的資料是不是Not a Number
+			if(isNaN(n1)){
+				// 不能用
+				alert("不正確的資料");
+			}else{ // 資料正確，執行運算程式
+				var op=prompt("Operation: +, -, *, /","");
+				var result;
+
+				if(op=="+"){ // 看看OP是不是字串+
+					result=n1+n2;
+				}else if(op=="-"){
+					result=n1-n2;
+				}else if(op=="*"){
+					result=n1*n2;
+				}else if(op=="/"){
+					result=n1/n2;
+				}else{
+					result="不支援的運算";
+				}
+				alert(result);
+			}
+
+			/*
+			var money=prompt("Money","");
+			// 判斷式; ()裡面放boolean
+			if(money>30000){
+				// 如果布林值是true，執行大括號中的程式碼
+				// 並且會跳過其他的else if
+				alert("Rejected");
+			}else{
+				// 如果布林值是false，執行else大括號中的程式碼
+				alert(money);
+			}
+			*/
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

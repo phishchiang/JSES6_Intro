@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Loop</title>
+		<script type="text/javascript">
+
+		function testNum(n){
+			var n;
+			if((!Number.isInteger(n))||(n<=0)){
+				alert(n+" 什麼鬼都不是!!");
+			}else{
+				if(n==2){ // 迴圈無法包含2所以在這邊獨立
+					alert(n+" 是質數，沒有數可以整除他");
+				}else if(n>2){ // 迴圈大於2
+					for(var i=2; i<n; i++){ // i在迴圈中從1 ~ n-1
+						if(n%i==0){ 
+							alert(n+" 是合數，他至少可以被 "+i+" 整除");
+							break; // 找到答案了，就不用繼續跑迴圈
+						}else if(i==n-1){ // 有測到最後一個都還沒有的話，就是質數
+							alert(n+" 是質數，沒有數可以整除他");
+						}
+					}			
+				}
+				return i;				
+			}
+		}
+
+		var result=testNum(-5.00);
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

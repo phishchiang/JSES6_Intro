@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <button>Hello World!!!</button>
+  <table id="outside">
+      <tr><td id="t1">one</td></tr>
+      <tr><td id="t2">two</td></tr>
+  </table>
+  <svg width="1000" height="500" id="ground"></svg>
+</body>
+<script>
+  let app={
+    'a':'apple',
+    'b':{'book':'bookName'},
+    'c':'cat',
+    'skill':[888, 666, 999]
+  }
+  /*
+  console.log(app['a']);
+  for(let key in app){
+    console.log(app[key]);
+  }
+  */
+  /*
+  for (let smallObj in app){
+    if (app[smallObj] instanceof Array){
+      for (let i=0; i< app[smallObj].length; i++){
+        console.log(app[smallObj][i]);
+      }
+      // console.log(app[smallObj][0]);
+    }
+  }
+  */
+  for (let key in app){
+    console.log(key)
+  }
+
+  let Array01s = ['fefefef', 'jgjnfhgjgh', 'ekigreuor']
+  for (let keyA in Array01s){
+    console.log(Array01s[keyA]);
+  }
+
+/*
+  let Array01s = ['fefefef', 'jgjnfhgjgh', 'ekigreuor']
+
+  Array01s.forEach(function(array01){
+    console.log(array01)
+  })
+
+  let CCC=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+  CCC.setAttribute("fill", "#888888");
+  CCC.setAttribute("cx", 50);
+  CCC.setAttribute("r", 100);
+  let ground = document.getElementById("ground");
+  console.log(ground);
+  ground.appendChild(CCC);
+*/
+</script>
+</html>

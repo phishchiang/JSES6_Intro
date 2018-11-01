@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Event</title>
+		<script type="text/javascript">
+
+		function init(){
+			// 所有網頁的靜態內容載入完成後，觸發這個函式，做程式的進入點
+			var btn=document.getElementById("btn");
+			// 老舊的做法
+			/*
+			btn.onclick=function(){
+				alert("Hello");
+			};
+			*/
+
+			/* 標準教學做法
+
+			var handler=function(){
+				alert("Hello");
+			};
+			btn.addEventListener("click",handler); 
+
+			*/
+			// 精簡的做法
+
+			btn.addEventListener("click",function(){ //匿名函式
+				alert("Hello");
+			}); 
+		}
+		
+
+		</script>
+	</head>
+	<body onload="init();"><!-- BODY這個標籤載入完成之後，觸發load事件 -->
+		<button id="btn">Click</button>			
+	</body>
+</html>

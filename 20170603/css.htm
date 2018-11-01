@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><!-- 手機一定要用 -->
+		<title>RWD</title>
+		<style type="text/css">
+		.frame{
+			width:1000px; margin:0px auto;/*上下是0；左右是auto*/
+			text-align:center;
+		}
+		.box{
+			width:300px; margin:10px;
+			display:inline-block;vertical-align:top;
+			background-color:red;
+		}
+		.title{
+			font-weight:bold; font-size:40px; text-align:center;
+		}
+		.desktop-menu{display:block;}
+		.mobile-menu{display:none;}
+		
+		@media (max-width:500px){
+			.frame{width:320px;}
+			.title{font-size:20px;}
+			.desktop-menu{display:none;}
+			.mobile-menu{display:block;}
+		}/*如果裝置小於500px*/
+		</style>
+	</head>
+	<body>
+		<div class="title">這是一個回應式設計的練習</div>
+		<div class="desktop-menu">電腦版選單</div>
+		<div class="mobile-menu">手機板選單</div>
+			<div class="frame">
+				<div class="box">1</div>
+				<div class="box">2</div>
+				<div class="box">3</div>
+			</div>
+	</body>
+</html>

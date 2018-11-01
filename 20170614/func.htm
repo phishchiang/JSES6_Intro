@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>checkPrimeFunc</title>
+		<script>
+		function checkPrime(n){
+			for(var i=2; i<n; i++){ // i 是屬於全域空間變數
+				if(n%i==0){
+					return false;
+				}
+			}
+			// 整個迴圈都跑，都還是沒有中斷
+			return true;
+		}
+		checkPrime(91);
+		var result=checkPrime(91);
+		if (result){
+			alert("質數");
+		}else{
+			alert("不是質數");
+		}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

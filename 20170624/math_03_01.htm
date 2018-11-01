@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math and String</title>
+		<script type="text/javascript">
+			function check(){
+
+				// toLowerCase()，把文字都強制變成小寫
+
+				var value=document.getElementById("text").value;
+				value =value.toLowerCase();
+				if(value.indexOf("fuck")>-1){
+					alert("Do dirty words");
+				}
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text" value="Hello"/>
+		<button onclick="check();">Check</button>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Moving Box</title>
+		<style type="text/css">
+			.box{
+				width:100px; height:100px; background-color:red;
+				position:absolute; /* 一定要是絕對定位，才可以拖曳 */
+				left:200px; top:200px;
+			}
+		</style>
+		<script type="text/javascript">
+			var box;
+			function dataEva(e){
+				var showMouseDoc=document.getElementById("showMouseDoc");
+				var showBox=document.getElementById("showBox"); 
+				var showMouse=document.getElementById("showMouse");
+				showBox.innerHTML="Box :"+e.clientX+" "+e.clientY;
+				showMouse.innerHTML="boxOffsetX Y :"+box.offsetLeft+" "+box.offsetTop;
+				showMouseDoc.innerHTML="e.clientX, Y :"+e.clientX+" "+e.clientY;
+			}
+
+			function init(){
+				box=document.getElementById("box");
+				box.addEventListener("mousedown", pickup);
+				document.addEventListener("mousemove",dataEva);
+
+			}
+			function pickup(){
+				// 讓 box 能動
+
+				document.addEventListener("mousemove", move);
+				// 連續觸發，動態的註冊才適用
+
+				// 若有下一次的點擊換掉，改執行 putdown
+				box.addEventListener("mouseup", putdown);
+				box.removeEventListener("mouseup", pickup);
+				
+			}
+			function move(e){
+
+				/*
+				原本以為可以用"游標座標"減掉"游標座標"跟"box左上角偏移座標"相減，
+				來得到結果，但是發現偏移座標(box.offsetLeft)根本不會因此移動
+				*/
+
+				// box.style.left=(e.clientX+(e.clientX-box.offsetLeft))+"px";
+				// box.style.top=(e.clientY+(e.clientY-box.offsetTop))+"px";
+				box.style.left=(e.clientX-50)+"px";
+				box.style.top=(e.clientY-50)+"px";
+				
+			}
+			function putdown(){
+				document.removeEventListener("mousemove", move );
+
+				box.addEventListener("mousedown", pickup);
+				box.removeEventListener("mouseup", putdown);
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<div id="box" class="box"></div>
+		<div id="showBox">Box :</div>
+		<div id="showMouse">boxOffsetX Y :</div>
+		<div id="showMouseDoc">e.clientX, Y :</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Layout</title>
+<style type="text/css">
+.frame{
+	width:1000px;
+	background-color:gray;
+	margin-left:auto;margin-right:auto;
+/*
+	better center solution
+*/
+/*	
+	text-align:center;
+	only apply for the conent
+*/
+}
+.left{
+	padding:10px;
+	width:480px;display:inline-block; vertical-align:top;
+	background-color:red;
+}
+.right{
+	padding:10px;
+	width:480px;display:inline-block; vertical-align:top;
+	background-color:blue;
+}
+</style>
+</head>
+<body>
+	<div class="frame">
+		<div class="left">My Favorite
+			<ul>
+				<li>test</li>
+				<li>test</li>
+			</ul>
+		</div><!--
+		--><div class="right">Right</div>
+	<!--
+		<table style="width:100%"; border="1">
+			<tr>
+				<td>left</td>
+				<td>right</td>
+			</tr>
+		</table>
+	-->
+	</div>
+</body>
+</html>

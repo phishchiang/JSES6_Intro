@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>City Population</title>
+		<script type="text/javascript">
+		//
+		</script>
+	</head>
+	<body>
+		<h3>City Population</h3>
+		<!-- 
+		<a href="http://localhost:8080/city.php?name=taipei">Taipei</a>
+		<a href="http://localhost:8080/city.php?name=hsinchu">Hsinchu</a>
+		-->
+		<form action="http://localhost:8080/city.php">
+			 <input type="text" name="name"/> 
+			 <!-- 
+			 關鍵是前面的name屬性很重要,
+			 第二個name則是前後端接點的名稱,
+			 php的接點則是 $name=$_REQUEST["name"]; 中的第二個name
+			  -->
+			 <input type="submit" value="Search" />
+			 <!-- submit 搭配form表單，連線到你 action 的網址 -->
+		</form>
+	</body>
+</html>

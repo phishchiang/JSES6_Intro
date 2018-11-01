@@ -1,0 +1,434 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bo",
+				"bolder"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"hea",
+				"header-text"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"padding-t",
+				"padding-bottom"
+			],
+			[
+				"border-bot",
+				"border-bottom-color"
+			],
+			[
+				"font-g",
+				"font-kerning"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "20170617/homework07_movieSel.htm",
+			"settings":
+			{
+				"buffer_size": 4294,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "20170603/css_end_02.htm",
+			"settings":
+			{
+				"buffer_size": 455,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 588.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Install Package Control"
+			]
+		],
+		"width": 624.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/csieNTU/Javascripts_webIntro",
+		"/D/csieNTU/Javascripts_webIntro/20170524",
+		"/D/csieNTU/Javascripts_webIntro/20170531",
+		"/D/csieNTU/Javascripts_webIntro/20170603",
+		"/D/csieNTU/Javascripts_webIntro/20170607",
+		"/D/csieNTU/Javascripts_webIntro/20170610",
+		"/D/csieNTU/Javascripts_webIntro/20170614",
+		"/D/csieNTU/Javascripts_webIntro/20170617"
+	],
+	"file_history":
+	[
+		"/D/csieNTU/Javascripts_webIntro/20170614/lib.js",
+		"/D/csieNTU/Javascripts_webIntro/20170614/index.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170614/Object_02.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170614/homework06_lineParallel_01.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170614/scope_03.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170610/homework05_testNum_02.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170531/homework02_fb.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170603/google_developers.html",
+		"/D/csieNTU/Javascripts_webIntro/20170603/test.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170603/homework03_googleDev.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170607/homework04_cal_02.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170603/rwd.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170607/homework03_cal_02.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170603/js_01.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170524/homework01_introMyself.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170531/layout_03.htm",
+		"/D/html/practice_A01/svg_4_01.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170524/home.htm",
+		"/D/csieNTU/Javascripts_webIntro/20170524/home_02.htm",
+		"/C/Users/Phish/Desktop/1.py",
+		"/C/Users/Phish/Desktop/2.mel",
+		"/C/Users/Phish/Documents/maya/2017/scripts/djRivet.mel",
+		"/D/withinVR/ProjectXX/assets/goldiRigUpdate/source/Pipeline_nClothSim_v_1.0/addJoints.py",
+		"/D/html/practice_A01/page_A02.htm",
+		"/H/withinVR/2017/Maya.env",
+		"/C/Users/Phish/Documents/maya/2017/Maya.env",
+		"/D/withinVR/neon-lights-master/asset-viewer/animation.html"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bnt",
+			"btn-txt",
+			"genreTxt",
+			"btn-txt",
+			"getId",
+			"id",
+			"latestMovie",
+			"content-card-bdr-all-OFF",
+			"content-card-bdr-all-ON",
+			"content-card-bdr-",
+			"content-card-bdr-all",
+			"content-card-bdr-all-ON",
+			"content-movie-photo-bdr",
+			"middle",
+			"content-movie-photo-bdr\"",
+			"content-card-bdr-btn",
+			"content-card-bdr",
+			"content-title-txt",
+			"text",
+			"line",
+			"Player",
+			"1",
+			"large-card",
+			"w3-card",
+			"img-fill",
+			"card-container",
+			"w3-container w3-left-align card-container",
+			"w3-c",
+			"inner",
+			"inner-center",
+			"fake",
+			"n1",
+			"n",
+			"style",
+			"barBtm-main",
+			"barBtm",
+			"main_btm",
+			"main",
+			"font",
+			"barTextL",
+			"left",
+			"contextBar",
+			"contextMain",
+			"\t\t<",
+			"contextMain",
+			"main_btm",
+			"test",
+			"desktopBar",
+			"barText",
+			"div",
+			"color:white;",
+			"r",
+			"d",
+			"main",
+			"10",
+			"12",
+			"2014",
+			"2015",
+			"2016",
+			"contextL",
+			"titleLogin",
+			"td",
+			"left",
+			"jpg",
+			"00",
+			"3-city",
+			"2-house",
+			"1-forest"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "20170617/homework07_movieSel.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2261,
+								2261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "20170603/css_end_02.htm",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 42.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Javascripts_webIntro.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 352.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

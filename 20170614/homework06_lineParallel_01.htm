@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Line Parallel Compare</title>
+		<script src="libForLine.js"></script>
+		<script>
+			
+			var line1=new Line(3,4,5,6);
+			var line2=new Line(1,6,2,4);
+
+			// 建構式解法2
+			if(line1.m==line2.m){
+				alert("兩條線段平行!!");
+			}else{
+				alert("兩條線段不平行!!");
+			}
+			/*
+
+			// 建構式解法1
+			var m1=(line1.y2-line1.y1)/(line1.x2-line1.x1);
+			var m2=(line2.y2-line2.y1)/(line2.x2-line2.x1);
+			if(m1==m2){
+				alert("兩條線段平行!!");
+			}else{
+				alert("兩條線段不平行!!");
+			}
+			
+			// 一般式解法1
+			var line1=createLine(3,4,5,6);
+			var line2=createLine(1,6,2,4);
+			if(line1.m==line2.m){
+				alert("兩條線段平行!!");
+			}else{
+				alert("兩條線段不平行!!");
+			}
+			
+			*/		
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

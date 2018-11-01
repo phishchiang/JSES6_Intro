@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>Google Develops</title>
+		<style>
+			body{margin:0px;}
+			.frame{
+				width:100%;
+				height:30px;
+				margin-left:auto;margin-right:auto;
+				
+				/*background-color:#FFdd44;*/
+			}
+			.mainFix{background-color:white;height:60px; width:100%;
+				border-bottom: 1px solid; border-bottom-color: rgb(220,220,220);
+				position:fixed;
+			}
+			.contentBar{height:1000px;/*background-color:#BBcc44;*/}
+			.barTextLDesktop{/*padding:10px;  text-align: center;*/
+				/*background-color:red;*/
+
+				color:gray;
+				margin-left:25px;
+				font-size:20px;
+				vertical-align:middle;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				/*display:block;*/
+			}
+			.barTextLMobile{
+				/*background-color:red;*/
+
+				color:gray;
+				margin-left:25px;
+				font-size:20px;
+				vertical-align:middle;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				display:none;
+				padding-top: 15px;
+			}
+			.imgDiv{display:inline-block;height:25px;}
+			.barTextR{/*padding:10px;  text-align: center;*/
+				background-color:red;
+				right:10px;
+				top:10px;
+				font-size:20px;
+				vertical-align:middle;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				position:absolute;
+			}
+
+			.contentL{
+				padding:10px;
+				width:45%;display:inline-block; vertical-align:top;
+				text-align:center;
+			}
+			.contentR{
+				padding:10px;
+				width:45%;display:inline-block; vertical-align:top;
+				text-align:center;
+			}
+			.searchbox{
+				background:#f7f7f7;
+				border-radius: 2px;
+				/*outline: 0px;*/
+			    height: 36px;
+			}
+			.basicText{
+				font-size:12px;
+				color:white;
+				padding: 10px;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+			}
+			.barBtm-main-desktop{
+				width:100%;height:30%;margin-left:auto;margin-right:auto;
+				background-color:#303c42;bottom:0px;
+				margin-bottom: 0px; color:white;
+			}
+			.barBtm-01-desktop{
+				/*background-color:red;*/ 
+				width:25%; display:inline-block; vertical-align: top;
+			}
+			@media (max-width:500px){
+				.barTextLDesktop{display:none;}
+				.barTextLMobile{display:inline-block;}
+				.imgDiv{display:none;}
+				.contentL{width:92%;}
+				.contentR{width:92%;}
+				.barBtm-main-desktop{height:60%;}
+				.barBtm-01-desktop{width:50%;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mainFix">
+			<div class="frame">
+				<div class="imgDiv">
+					<img src="https://developers.google.com/_static/af7ae4b3fc/images/redesign-14/logo-grey.svg"  align="middle" hspace="25" vspace="17"></img>
+				</div>
+				<span class="barTextLDesktop">Home</span>
+				<span class="barTextLDesktop">Product Index</span>
+				<span class="barTextLDesktop">Blog</span>
+				<span class="barTextLMobile">漢堡menu</span>
+				<span class="barTextLMobile">Google Developers</span>
+				<span class="barTextR"><img width="50px" src="http://i.imgur.com/cfnHeJE.jpg" align="middle"></img></span>
+			</div>
+			<!-- <hr> -->
+		</div>
+		<div class="contentBar">
+			<div style="text-align:center; padding-top: 80px">
+				<img width="400px" src="https://developers.google.com/_static/b978c21594/images/redesign-14/lockup-color.svg" align="middle"></img>
+			</div>
+			<div style="text-align:center; padding: 50px; ">
+				<input class="searchbox" type="text" name="fbPassword" size="50px" value="Search products and documentation">
+			</div>
+			<div style="width:100%; text-align:center;">
+				<img width="92%" src="https://lh3.googleusercontent.com/gALBUZ-_ljeULlxgTcqIb5YpRWH_nKTJCanknereTZHojfbPmgWCQIDDQwlb5wr2RdfU5gKWsiWTJ-T6lWah6qxlYjeNsqNY=s888" align="middle" ></img>
+				<div style="text-align: left; padding-left: 30px">
+					Google I/O 2017 May 17 - 19, Mountain View
+				</div>
+
+			</div>
+			<div style="text-align:center;">
+				<div class="contentL">
+					<img width="100%" src="https://lh3.googleusercontent.com/7-JOE6V1aTSFQdc5T9-PjWihrAzCMPIeOsX12E7iuS1z2Ngfbw36Ve4xbE6lJcNYx7kQGtOvpKvPQx57SUNs8kcbmJGngzk=s688" align="middle" ></img>
+					<div style="text-align: left;">
+						Google I/O'17 keynote highlights
+					</div>
+				</div><!--
+				--><div class="contentR">
+					<img width="100%" src="https://lh3.googleusercontent.com/sjidY-FZU8RqWkIis736f214tmG3jKTZ-zkFbOs6X2gWTuTJhpTgIzWdDZry5iOJ9c420SJfkRYsmtyJc2Y88EBo-JTLmHs=s688" align="middle" ></img>
+					<div style="text-align: left;">
+						Google I/O'17 keynote highlights
+					</div>
+				</div>
+			</div>
+			<div class="barBtm-main-desktop">
+				<div class="barBtm-01-desktop">
+					<div class="basicText">
+						Connect
+					</div>
+					<div class="basicText">
+						Blog
+					</div>
+					<div class="basicText">
+						Facebook
+					</div>
+					<div class="basicText">
+						Google+
+					</div>
+					<div class="basicText">
+						Medium
+					</div>
+					<div class="basicText">
+						Twitter
+					</div>
+					<div class="basicText">
+						Youtube
+					</div>
+				</div><!-- 
+				--><div class="barBtm-01-desktop">
+					<div class="basicText">
+						Programs
+					</div>
+					<div class="basicText">
+						Women Techmakers
+					</div>
+					<div class="basicText">
+						Agency Program
+					</div>
+					<div class="basicText">
+						GDG
+					</div>
+					<div class="basicText">
+						Google Developer Experts
+					</div>
+					<div class="basicText">
+						Startup Launchpad
+					</div>
+				</div><!--
+				--><div class="barBtm-01-desktop">
+					<div class="basicText">
+						Developer Consoles
+					</div>
+					<div class="basicText">
+						Google API Console
+					</div>
+					<div class="basicText">
+						Google Cloud Platform Console
+					</div>
+					<div class="basicText">
+						Google Play Console
+					</div>
+					<div class="basicText">
+						Firebase Console
+					</div>
+					<div class="basicText">
+						Cast SDK Developer Console
+					</div>
+					<div class="basicText">
+						Chrome Web Store Dashboard
+					</div>
+				</div><!--
+				--><div class="barBtm-01-desktop">
+					<div class="basicText">
+						Android
+					</div>
+					<div class="basicText">
+						Chrome
+					</div>
+					<div class="basicText">
+						Firebase
+					</div>
+					<div class="basicText">
+						Google Cloud Platform
+					</div>
+					<div class="basicText">
+						All Products
+					</div>
+				</div>				
+
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+
+
+<!-- 
+
+如何fix width但是又可以同時配合視窗大小縮放?
+如何靠右對齊 在一個div之中?
+
+ -->

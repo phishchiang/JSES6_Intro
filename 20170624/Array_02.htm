@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array</title>
+		<script type="text/javascript">
+			var n=Number(prompt("Number",""));
+			var grades=new Array(n);
+			// 輸入資料
+			for(var i=0; i<grades.length; i++){
+				grades[i]=Number(prompt("Grades",""));
+			}
+
+
+			// 計算平均數
+			var sum=0;
+			for(var i=0; i<grades.length; i++){
+				alert(grades[i]); 
+				sum=sum+grades[i];
+			}
+
+			var avg=sum/grades.length;
+			alert(avg);
+      // Another way to create the Array is []
+      let Array01s = ['fefefef', 'jgjnfhgjgh', 'ekigreuor']
+
+      Array01s.forEach(function(array01){
+        console.log(array01)
+      })   
+
+		</script>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

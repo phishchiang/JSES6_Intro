@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array</title>
+		<script type="text/javascript">
+			// 陣列在JavaScript裡面是一種"物件"，其實是動態的物件
+			var grades=new Array(3);
+			// alert(grades);
+			alert(grades.length);
+			grades[0]=60; // 陣列的第一格
+			grades[1]=70;
+			grades[2]=80;
+			// grades[3]=100; // 放下去，長出第四格
+			// alert(grades.length);
+
+			// 計算平均數
+			var sum=0;
+			for(var i=0; i<grades.length; i++){
+				alert(grades[i]); // [] 裡面可以放變數，動態陣列索引
+				sum=sum+grades[i];
+			}
+
+			var avg=sum/grades.length;
+			alert(avg);
+      console.log(typeof(grades));
+		</script>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

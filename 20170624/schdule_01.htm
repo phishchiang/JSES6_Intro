@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Schedule</title>
+		<script type="text/javascript">
+			var timer; // 全域變數，可以讓別的函式共用
+			function init(){
+				timer=document.getElementById("timer");
+				window.setTimeout(countdown, 1000); // 1000毫秒，在載入init之後的一秒鐘後
+				alert("B");
+
+			}
+			function countdown(){ // 寫在後面沒關係，因為時間點是在init之後
+				// alert("A");
+				timer.innerHTML=timer.innerHTML-1;
+				if(timer.innerHTML>0){ // 繼續倒數
+					window.setTimeout(countdown, 1000); // 無線循環，一秒後
+				}else{ // 倒數結束
+					window.location="http://www.google.com/";
+				}
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<span id="timer">3</span>
+	</body>
+</html>
